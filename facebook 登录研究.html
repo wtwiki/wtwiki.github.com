@@ -1,0 +1,118 @@
+<html>
+        <head>
+                <title>facebook 登录研究</title>
+                <meta name="keywords" content="WangTai, 王泰" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <link rel="Stylesheet" type="text/css" href="../styles/styles.css" />
+                <!-- blog ico -->
+                <!--
+                <link type="image/x-icon" rel="icon" href="../images/ruchee.ico" />
+                <link type="image/x-icon" rel="shortcut icon" href="../images/ruchee.ico" />
+                -->
+                <!-- for SyntaxHighlighter core -->
+                <script type="text/javascript" src="../scripts/shCore.js"></script>
+                <link type="text/css" rel="stylesheet" href="../styles/shCore.css"/>
+                <!-- for SyntaxHighlighter theme -->
+                <link type="text/css" rel="stylesheet" href="../styles/shThemeMidnight.css"/>
+                <!-- for SyntaxHighlighter syntax -->
+                <script type="text/javascript" src="../scripts/shBrushBash.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushCpp.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushCSharp.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushJava.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushPerl.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushPython.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushRuby.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushSql.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+                <!-- for SyntaxHighlighter execute -->
+                <script type="text/javascript">
+                        SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf";
+                        SyntaxHighlighter.all();
+                        </script>
+                </head>
+                <body>
+                        <center style="font-size: x-large; font-weight: normal;" >loop_in_debug</center><br />
+                        
+<dl>
+<dt><strong>Request URL</strong> </dt>
+<dd><a href="https://www.facebook.com/login.php?login_attempt=1</dd>">https://www.facebook.com/login.php?login_attempt=1</dd></a>
+<dt><strong>Request Method</strong> </dt>
+<dd>POST</dd>
+<dt><strong>Status Code</strong> </dt>
+<dd>302 Found</dd>
+<dt><strong>Request Headers</strong> </dt>
+</dl>
+<pre>
+POST /login.php?login_attempt=1 HTTP/1.1
+Host: www.facebook.com
+Connection: keep-alive
+Content-Length: 248
+Cache-Control: max-age=0
+Origin: https://www.facebook.com
+User-Agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.142 Safari/535.19
+Content-Type: application/x-www-form-urlencoded
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Referer: https://www.facebook.com/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8,zh;q=0.6
+Accept-Charset: UTF-8,*;q=0.5
+Cookie: datr=yolVT7zhvDbzHJ8dN-1k1Xg3; locale=en_US; lu=gAaLAF076f5h-e7uzr0_c6Gg; lsd=AVoIKnwa; reg_fb_gate=https%3A%2F%2Fwww.facebook.com%2F; reg_fb_ref=https%3A%2F%2Fwww.facebook.com%2F; _e_1k1y_0=%5B%221k1y%22%2C1333959052368%2C%22act%22%2C1333959052360%2C0%2C%22lastname%22%2C%22click%22%2C%22click%22%2C%22-%22%2C%22r%22%2C%22%2F%22%2C%7B%22ft%22%3A%7B%7D%2C%22gt%22%3A%7B%7D%7D%2C1011%2C242%2C0%2C1263%2C16%5D; act=1333959193984%2F4%3A2; _e_1k1y_1=%5B%221k1y%22%2C1333959193988%2C%22act%22%2C1333959193984%2C4%2C%22email%22%2C%22click%22%2C%22click%22%2C%22bluebar%22%2C%22r%22%2C%22%2F%22%2C%7B%22ft%22%3A%7B%7D%2C%22gt%22%3A%7B%7D%7D%2C789%2C39%2C0%2C1263%2C16%5D; wd=1278x289
+</pre>
+<dl>
+<dt><strong>Query String Parameters</strong> </dt>
+</dl>
+<pre>
+login_attempt:1
+</pre>
+<dl>
+<dt><strong>Form Data</strong> </dt>
+</dl>
+<pre>
+lsd:AVoIKnwa
+locale:en_US
+email:cn.wang.tai%40gmail.com
+pass:facebookwdsr19840225
+persistent:1
+default_persistent:1
+charset_test:%E2%82%AC%2C%C2%B4%2C%E2%82%AC%2C%C2%B4%2C%E6%B0%B4%2C%D0%94%2C%D0%84
+timezone:-480
+lgnrnd:010957_NCqu
+lgnjs:1333959001
+</pre>
+<dl>
+<dt><strong>Response Headers</strong> </dt>
+</dl>
+<pre>
+HTTP/1.1 302 Found
+Cache-Control: private, no-cache, no-store, must-revalidate
+Expires: Sat, 01 Jan 2000 00:00:00 GMT
+Location: http://www.facebook.com/
+P3P: CP="Facebook does not have a P3P policy. Learn why here: http://fb.me/p3p"
+Pragma: no-cache
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Set-Cookie: _e_1k1y_0=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.facebook.com; httponly
+Set-Cookie: _e_1k1y_1=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.facebook.com; httponly
+Set-Cookie: act=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.facebook.com; httponly
+Set-Cookie: c_user=1133876110; expires=Wed, 09-May-2012 08:13:32 GMT; path=/; domain=.facebook.com
+Set-Cookie: datr=yolVT7zhvDbzHJ8dN-1k1Xg3; expires=Wed, 09-Apr-2014 08:13:31 GMT; path=/; domain=.facebook.com; httponly
+Set-Cookie: lsd=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.facebook.com
+Set-Cookie: lu=gg35VwEdoVU0MixWhaejUSbA; expires=Wed, 09-Apr-2014 08:13:32 GMT; path=/; domain=.facebook.com; httponly
+Set-Cookie: openid_p=3328249379663; expires=Wed, 09-May-2012 08:13:32 GMT; path=/; domain=.facebook.com; httponly
+Set-Cookie: reg_fb_gate=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.facebook.com
+Set-Cookie: reg_fb_ref=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.facebook.com
+Set-Cookie: s=Aa5fGMbHcJ9dtgwW; expires=Wed, 09-May-2012 08:13:32 GMT; path=/; domain=.facebook.com; secure; httponly
+Set-Cookie: wd=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=.facebook.com; httponly
+Set-Cookie: xs=1%3AVYynzNlEyg5kGQ%3A0%3A1333959212; expires=Wed, 09-May-2012 08:13:32 GMT; path=/; domain=.facebook.com; httponly
+Content-Type: text/html; charset=utf-8
+X-FB-Debug: oas4MkrioqGZ4Zi9K4YZrA4bz2hp+OeuPwuRk4PREek=
+X-Cnection: close
+Date: Mon, 09 Apr 2012 08:13:32 GMT
+Content-Length: 0
+</pre>
+
+                </body>
+</html>

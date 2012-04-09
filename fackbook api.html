@@ -1,0 +1,100 @@
+<html>
+        <head>
+                <title>fackbook api</title>
+                <meta name="keywords" content="WangTai, 王泰" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <link rel="Stylesheet" type="text/css" href="../styles/styles.css" />
+                <!-- blog ico -->
+                <!--
+                <link type="image/x-icon" rel="icon" href="../images/ruchee.ico" />
+                <link type="image/x-icon" rel="shortcut icon" href="../images/ruchee.ico" />
+                -->
+                <!-- for SyntaxHighlighter core -->
+                <script type="text/javascript" src="../scripts/shCore.js"></script>
+                <link type="text/css" rel="stylesheet" href="../styles/shCore.css"/>
+                <!-- for SyntaxHighlighter theme -->
+                <link type="text/css" rel="stylesheet" href="../styles/shThemeMidnight.css"/>
+                <!-- for SyntaxHighlighter syntax -->
+                <script type="text/javascript" src="../scripts/shBrushBash.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushCpp.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushCSharp.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushCss.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushJava.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushJScript.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushPerl.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushPhp.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushPython.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushRuby.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushSql.js"></script>
+                <script type="text/javascript" src="../scripts/shBrushXml.js"></script>
+                <!-- for SyntaxHighlighter execute -->
+                <script type="text/javascript">
+                        SyntaxHighlighter.config.clipboardSwf = "../scripts/clipboard.swf";
+                        SyntaxHighlighter.all();
+                        </script>
+                </head>
+                <body>
+                        <center style="font-size: x-large; font-weight: normal;" >loop_in_debug</center><br />
+                        
+<p>
+facebook api认证采用oAuth2，过去的REST API已经不提供认证功能...
+</p>
+
+<p>
+oAuth2认证在桌面设备上适合使用的有
+</p>
+
+<ol>
+<li>
+客户端认证流程（需要js支持）
+
+<li>
+服务端认证流程（需要html和server支持）
+
+<li>
+设备认证（ <strong>不需要server支持</strong> 由facebook对每个设备生成设备号，再由用户输入到fb中认证）
+
+</ol>
+
+<p>
+以上三种方式，app都无法直接获得用户名密码，前两种方式为用户使用fb提供的表单提交到fb服务器后，callback回app，第三种方式不需要用户输入密码，由fb直接生成设备号，用户再输入到fb中。
+</p>
+
+<dl>
+<dt>客户端认证时序图 </dt>
+<dd><img src="../image/client_side_HTTP Sequence Diagram.png" alt="客户端认证时序图" style="width:50%" /></dd>
+<dt>服务端认证时序图 </dt>
+<dd><img src="../image/sever_side_HTTP Sequence Diagram.png" alt="服务端认证时序图" style="width:50%" /> </dd>
+<dt>设备认证demo </dt>
+<dd><a href="http://oauth-device-demo.appspot.com/">http://oauth-device-demo.appspot.com/</a></dd>
+</dl>
+
+<p>
+但我们如果做更高级的工作，需要伪装用户身份去fb获得更多资源信息，所以需要使用用户密码
+</p>
+
+<p>
+不过我们可以变通使用第三种方式，
+</p>
+<ol>
+<li>
+让用户把密码直接输入到客户端
+
+<li>
+后台登录fb
+
+<li>
+登录成功后，请求fb生成设备码
+
+<li>
+自动将设备码注册到fb中
+
+</ol>
+
+<dl>
+<dd><strong>！风险：防止fb发现我们获得密码</strong></dd>
+<dd><strong>！模拟登录对于验证码需要增加成本，机器识别？人工识别？</strong></dd>
+</dl>
+
+                </body>
+</html>
